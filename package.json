@@ -2,10 +2,10 @@
   "name": "baxter",
   "description": "Running a background job as long as the main process is alive",
   "main": "./bin/baxter.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Jakob Mattsson <jakob.mattsson@gmail.com> (jakobmattsson.se)",
   "bin": {
-    "baxter": "./bin/baxter"
+    "baxter": "./bin/baxter.js"
   },
   "repository": {
     "type": "git",

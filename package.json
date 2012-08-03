@@ -1,0 +1,23 @@
+{
+  "name": "baxter",
+  "description": "Running a background job as long as the main process is alive",
+  "main": "./bin/baxter.js",
+  "version": "0.1.0",
+  "author": "Jakob Mattsson <jakob.mattsson@gmail.com> (jakobmattsson.se)",
+  "bin": {
+    "baxter": "./bin/baxter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jakobmattsson/baxter.git"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "devDependencies": {
+    "coffee-script": "1.3.x"
+  },
+  "scripts": {
+    "prepublish": "mkdir -p bin && (echo '#!/usr/bin/env node' && coffee -p src/baxter.coffee) > bin/baxter.js"
+  }
+}

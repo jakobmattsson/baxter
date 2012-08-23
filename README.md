@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/jakobmattsson/baxter.png)](http://travis-ci.org/jakobmattsson/baxter)
 baxter
 ======
 

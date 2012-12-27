@@ -24,7 +24,11 @@ runMain = runOnce (callback) ->
   main = spawn outer[0], outer.slice(1)
   main.stdout.on 'data', process.stdout.write.bind(process.stdout)
   main.stderr.on 'data', process.stderr.write.bind(process.stderr)
-  main.on 'exit', (code) -> callback()
+  main.on 'exit', (code) ->
+    callback()
+    setTimeout ->
+      process.exit(2)
+    , 400
 
 bgjob = spawn(inner[0], inner.slice(1))
 bgjob.stderr.on 'data', process.stderr.write.bind(process.stderr)
